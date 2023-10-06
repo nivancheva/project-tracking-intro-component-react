@@ -2,6 +2,9 @@ import './App.css'
 import logo from './images/logo.svg';
 import devicesImg from './images/illustration-devices.svg';
 import iconHamburger from './images/icon-hamburger.svg';
+import iconClose from './images/icon-close.svg';
+import { useState } from 'react';
+
 
 const menuLinks = [
   "Product",
@@ -11,12 +14,18 @@ const menuLinks = [
 
 function App() {
 
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  function toggleMenu() {
+    setMenuVisible(!menuVisible)
+  }
+
   return (
     <div>
-      <nav>
+      <nav className='container nav-container'>
         <div className='flex-container header'>
           <picture><img src={logo}/></picture>
-          <ul className='flex-container nav-bar'>
+          <ul className={`flex-container nav-bar ${menuVisible ? "" : "mobile-menu-hidden"} `}>
             {menuLinks.map((menuLink, idx) => {
               return (
                 <li key={idx}><a className='links'>{menuLink}</a></li>
@@ -24,15 +33,15 @@ function App() {
             })}
             <button className='links button_login'>Login</button>
           </ul>
-            <div>
-            <img src={iconHamburger}/>
-            </div>
+            <button onClick={toggleMenu} className={menuVisible ? "menuClose" : "menuHamburger"}>
+              <img src={menuVisible ? iconClose : iconHamburger}/> 
+            </button>
         </div>       
       </nav>
 
       <img src={devicesImg}/>
 
-      <main>
+      <main className='conteiner'>
         <div>
           <p>New</p>
           <p>Monograph Dashboard</p>

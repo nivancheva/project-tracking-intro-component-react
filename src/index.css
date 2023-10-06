@@ -15,11 +15,16 @@
     --fw-bold: 700;
 
     --fz-paragraph: 1.125rem;
-    --fz-heading-mb: 2.5rem;
-    --fz-heading-dsk: 4rem;
-    --fz-button-mb: .875rem;
-    --fz-button-dsk: 1rem;
+    --fz-heading: 2.5rem;
+    --fz-button: .875rem;
     --fz-main: .9375rem;
+}
+
+@media (min-width:800px) {
+    :root {
+        --fz-heading: 4rem;
+        --fz-button: 1rem;
+    }
 }
 
 */
@@ -49,7 +54,7 @@ body {
 
 h1 {
     font-weight: var(--fw-bold);
-    font-size: var(--fz-heading-mb);
+    font-size: var(--fz-heading);
 }
 
 .lowerCase {
@@ -64,7 +69,7 @@ h1 {
     color: var(--clr-light-blue);
     padding: .75rem 1.5625rem;
     border-radius: .5em;
-    font-size: var(--fz-button-mb);
+    font-size: var(--fz-button);
     text-transform: inherit;
     font-weight: var(--fw-bold);
     letter-spacing: .93px;
@@ -73,10 +78,6 @@ h1 {
 .button:hover {
     background-color: var(--clr-red-hover);
     cursor: pointer;
-}
-
-ul {
-    list-style-type: none;
 }
 
 .links {
@@ -115,12 +116,7 @@ ul {
 }
 
 @media (min-width:800px) {
-    h1 {
-        font-size: var(--fz-heading-dsk);
-    }
-
     .button {
-        font-size: var(--fz-button-dsk);
         letter-spacing: 1.07px;
     }
 }
