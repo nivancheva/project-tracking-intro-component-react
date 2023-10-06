@@ -18,10 +18,10 @@ function App() {
           <ul>
             {menuLinks.map((menuLink, idx) => {
               return (
-                <li key={idx}><a>{menuLink}</a></li>
+                <li key={idx}><a className='links'>{menuLink}</a></li>
               )
             })}
-            <li><a>Login</a></li>
+            <button className='links button_login'>Login</button>
           </ul>
         </div>       
       </nav>
@@ -35,10 +35,10 @@ function App() {
         </div>
         <div>
           <h1>Powerful Insights into your team</h1>
-          <p>Project planning and time tracking for agile teams</p>
+          <p className='lowerCase'>Project planning and time tracking for agile teams</p>
         </div>
         <div>
-          <button>Shedule a demo</button>
+          <button className='button'>Shedule a demo</button>
           <p>To see a preview</p>
         </div>
       </main>

@@ -2,6 +2,7 @@
 
 :root {
     --clr-red: hsl(0, 100%, 68%);
+    --clr-red-hover: hsl(0, 87%, 76%);
     --clr-very-dark-blue: hsl(230, 29%, 20%);
     --clr-dark-gr-blue: hsl(230, 11%, 40%);
     --clr-gr-blue: hsl(231, 7%, 65%);
@@ -43,5 +44,83 @@ body {
     font-family: var(--ff-main);
     font-weight: var(--fw-regular);
     font-size: var(--ff-main);
+    text-transform: uppercase;
 }
 
+h1 {
+    font-weight: var(--fw-bold);
+    font-size: var(--fz-heading-mb);
+}
+
+.lowerCase {
+    text-transform: none;
+    font-family: var(--ff-accent);
+    font-size: var(--fz-paragraph);
+}
+
+.button {
+    border: 0;
+    background-color: var(--clr-red);
+    color: var(--clr-light-blue);
+    padding: .75rem 1.5625rem;
+    border-radius: .5em;
+    font-size: var(--fz-button-mb);
+    text-transform: inherit;
+    font-weight: var(--fw-bold);
+    letter-spacing: .93px;
+}
+
+.button:hover {
+    background-color: var(--clr-red-hover);
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.links {
+    letter-spacing: 1.2px;
+    font-weight: var(--fw-bold);
+    color: var(--clr-very-dark-blue);
+
+    position:relative
+}
+
+.button_login {
+    border: 0;
+    background-color: inherit;
+    text-transform: inherit;
+    color: var(--clr-gr-blue);
+    padding: 0;
+}
+
+.links {
+    cursor: pointer;
+}
+
+.links:hover::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--clr-very-dark-blue);
+    cursor: pointer; 
+}
+
+.button_login::after {
+    background-color: var(--clr-gr-blue);
+}
+
+@media (min-width:800px) {
+    h1 {
+        font-size: var(--fz-heading-dsk);
+    }
+
+    .button {
+        font-size: var(--fz-button-dsk);
+        letter-spacing: 1.07px;
+    }
+}
