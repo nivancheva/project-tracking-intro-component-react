@@ -1,0 +1,18 @@
+.flex-container {
+    display: flex;
+    align-items: center;   
+}
+
+.header {
+    justify-content: space-between;
+}
+
+.nav-bar {
+    gap: 1.5rem;
+}
+
+@media (min-width:800px) {
+    .nav-bar {
+        gap: 2.625rem;
+    }
+}

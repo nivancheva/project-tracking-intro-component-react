@@ -1,6 +1,7 @@
 import './App.css'
 import logo from './images/logo.svg';
-import devicesImg from './images/illustration-devices.svg'
+import devicesImg from './images/illustration-devices.svg';
+import iconHamburger from './images/icon-hamburger.svg';
 
 const menuLinks = [
   "Product",
@@ -13,9 +14,9 @@ function App() {
   return (
     <div>
       <nav>
-        <div>
-          <img src={logo}/>
-          <ul>
+        <div className='flex-container header'>
+          <picture><img src={logo}/></picture>
+          <ul className='flex-container nav-bar'>
             {menuLinks.map((menuLink, idx) => {
               return (
                 <li key={idx}><a className='links'>{menuLink}</a></li>
@@ -23,6 +24,9 @@ function App() {
             })}
             <button className='links button_login'>Login</button>
           </ul>
+            <div>
+            <img src={iconHamburger}/>
+            </div>
         </div>       
       </nav>
 
