@@ -57,12 +57,6 @@ h1 {
     font-size: var(--fz-heading);
 }
 
-.lowerCase {
-    text-transform: none;
-    font-family: var(--ff-accent);
-    font-size: var(--fz-paragraph);
-}
-
 .button {
     border: 0;
     background-color: var(--clr-red);

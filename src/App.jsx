@@ -21,7 +21,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='bg-light-gray'>
       <nav className='container nav-container'>
         <div className='flex-container header'>
           <picture><img src={logo}/></picture>
@@ -39,18 +39,18 @@ function App() {
         </div>       
       </nav>
 
-      <img src={devicesImg}/>
+      <img className='device_img' src={devicesImg}/>
 
       <main className='conteiner'>
-        <div>
-          <p>New</p>
-          <p>Monograph Dashboard</p>
+        <div className='flex-container pharagraph'>
+          <p className='bg-black'>New</p>
+          <p className='clr-gray'>Monograph Dashboard</p>
         </div>
         <div>
           <h1>Powerful Insights into your team</h1>
           <p className='lowerCase'>Project planning and time tracking for agile teams</p>
         </div>
-        <div>
+        <div className='flex-container button-area'>
           <button className='button'>Shedule a demo</button>
           <p>To see a preview</p>
         </div>
