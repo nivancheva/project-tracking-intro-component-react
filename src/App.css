@@ -121,11 +121,11 @@
 .login::before {
     content: "";
     position: absolute;
-    width: 90%;
     height: 1px;
     background-color: var(--clr-gr-blue);
     top: -50%;
-    left: .8625rem
+    left: 5%;
+    right: 5%;
 }
 
 @media (min-width:800px) {
@@ -159,9 +159,9 @@
         border-radius: 50%;
         width: 5px;
         height: 5px;
-        top: 40%;
+        top: 50%;
         left: -50%;
-        transform: translate(-50%);
+        transform: translate(-50%, -50%);
     }
 
     .menuHamburger,
