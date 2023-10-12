@@ -38,11 +38,12 @@ function App() {
             </button>
         </div>       
       </nav>
-
+      
+      <div className='reverce-grid overflow_hidden container'>
       <img className='device_img' src={devicesImg}/>
 
-      <main className='conteiner'>
-        <div className='flex-container pharagraph'>
+      <main className=''>
+        <div className='flex-container paragraph'>
           <p className='bg-black'>New</p>
           <p className='clr-gray'>Monograph Dashboard</p>
         </div>
@@ -55,6 +56,7 @@ function App() {
           <p>To see a preview</p>
         </div>
       </main>
+      </div>
     </div>
   )
 }
