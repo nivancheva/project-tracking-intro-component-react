@@ -31,7 +31,7 @@ function App() {
                 <li key={idx}><a className='links'>{menuLink}</a></li>
               )
             })}
-            <button className='links button_login'>Login</button>
+            <li className='login'><a className='links button_login'>Login</a></li>
           </ul>
             <button onClick={toggleMenu} className={menuVisible ? "menuClose" : "menuHamburger"}>
               <img src={menuVisible ? iconClose : iconHamburger}/> 
